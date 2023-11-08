@@ -1,0 +1,30 @@
+.tasks {
+  background-color: white;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  border: solid 1px rgb(212, 212, 212);
+}
+
+.tasks__header {
+  font-size: 140%;
+  padding: 10px 0 15px;
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.tasks__addForm {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-gap: 2%;
+  margin-bottom: 15px;
+}
+
+.tasks__addField {
+  border: solid 1px rgb(212, 212, 212);
+  padding: 8px;
+}
+
+.tasks__addButton {
+  background-color: hsl(188, 100%, 25%);
+  border: none;
+  color: white;
+}
