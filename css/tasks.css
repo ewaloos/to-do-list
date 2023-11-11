@@ -36,3 +36,44 @@
   border: none;
   color: white;
 }
+
+.tasks__addButton:hover {
+  background-color: hsl(188, 100%, 21%);
+}
+
+.tasks__doneButton {
+  background-color: green;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-bottom: 50%;
+}
+
+.tasks__removeButton {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-bottom: 50%;
+}
+
+.tasks__list {
+  width: 100%;
+  list-style: none;
+  text-indent: none;
+  padding-left: none;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.tasks__item {
+  text-decoration: none;
+  padding-left: none;
+}
+
+.tasks__item--done {
+  text-decoration: line-through;
+}
