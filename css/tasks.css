@@ -72,6 +72,7 @@
 .tasks__item {
   text-decoration: none;
   padding-left: none;
+  list-style: none;
 }
 
 .tasks__item--done {
