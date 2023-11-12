@@ -1,18 +1,20 @@
 .tasks {
   background-color: white;
-  padding: 0 20px;
+  padding: 0px;
   margin-bottom: 10px;
   border: solid 1px rgb(212, 212, 212);
 }
 
 .tasks__header {
   font-size: 140%;
-  padding: 10px 0 15px;
-  border-bottom: solid 1px rgb(212, 212, 212);
+  font-weight: 700;
+  padding: 15px 20px;
+  border-bottom: solid 1.5px rgb(212, 212, 212);
 }
 
 .tasks__addForm {
   display: grid;
+  padding: 15px 20px;
   grid-template-columns: 8fr 1fr;
   grid-gap: 2%;
   margin-bottom: 15px;
@@ -28,13 +30,16 @@
 
 .tasks__addField {
   border: solid 1px rgb(212, 212, 212);
+  margin-top: 10px;
   padding: 8px;
 }
 
 .tasks__addButton {
   background-color: hsl(188, 100%, 25%);
+  margin-top: 10px;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .tasks__addButton:hover {
@@ -48,6 +53,7 @@
   height: 30px;
   border: none;
   margin-bottom: 50%;
+  cursor: pointer;
 }
 
 .tasks__removeButton {
@@ -56,14 +62,13 @@
   height: 30px;
   border: none;
   margin-bottom: 50%;
+  cursor: pointer;
 }
 
 .tasks__list {
   width: 100%;
-  list-style: none;
-  text-indent: none;
-  padding-left: none;
-  margin-bottom: 15px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   border-bottom: solid 1px rgb(212, 212, 212);
@@ -71,10 +76,14 @@
 
 .tasks__item {
   text-decoration: none;
-  padding-left: none;
-  list-style: none;
+  padding: 4px 10px;
+  width: 100%;
 }
 
 .tasks__item--done {
   text-decoration: line-through;
+}
+
+.js-tasks {
+  padding: 0px 10px;
 }
