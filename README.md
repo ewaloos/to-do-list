@@ -11,3 +11,5 @@ A simple website which can help organise tasks. After submitting tasks by the us
 3. JavaScript
 
 ## **Preview**
+
+![to-do-list](https://raw.githubusercontent.com/ewaloos/to-do-list/main/images/preview.png)
