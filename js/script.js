@@ -3,24 +3,29 @@
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks = [...tasks, { content: newTaskContent },];
-
-    render();
-  };
-
-  const removeTask = (index) => {
-    tasks = [...tasks.slice(0, index), ...tasks.slice(index + 1),];
-    render();
-  };
-
-  const toggleTaskDone = (index) => {
     tasks = [
-      ...tasks.slice(0, index),
+      ...tasks, 
+      { content: newTaskContent },];
+
+    render();
+  };
+
+  const removeTask = (taskIndex) => {
+    tasks = [
+      ...tasks.slice(0, taskIndex), 
+      ...tasks.slice(taskIndex + 1),];
+
+    render();
+  };
+
+  const toggleTaskDone = (taskIndex) => {
+    tasks = [
+      ...tasks.slice(0, taskIndex),
       {
-        ...tasks[index],
-        done: !tasks[index].done,
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done,
       },
-      ...tasks.slice(index + 1),
+      ...tasks.slice(taskIndex + 1),
     ];
     render();
   };
@@ -107,7 +112,7 @@
       </button>
       `;
     } else {
-      buttonsElement.innerHTML = ``;
+      buttonsElement.innerHTML = "";
     }
   };
 
