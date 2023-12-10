@@ -12,25 +12,6 @@
   border-bottom: solid 1.5px rgb(212, 212, 212);
 }
 
-.tasks__doneButton {
-  background-color: green;
-  color: white;
-  width: 30px;
-  height: 30px;
-  border: none;
-  margin-bottom: 50%;
-  cursor: pointer;
-}
-
-.tasks__removeButton {
-  background-color: red;
-  width: 30px;
-  height: 30px;
-  border: none;
-  margin-bottom: 50%;
-  cursor: pointer;
-}
-
 .tasks__list {
   width: 100%;
   padding: 5px 10px;
@@ -54,17 +35,42 @@
   text-decoration: line-through;
 }
 
-.js-tasks {
-  padding: 0px 10px;
+.tasks__doneButton {
+  background-color: green;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-bottom: 50%;
+  cursor: pointer;
+}
+
+.tasks__removeButton {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-bottom: 50%;
+  cursor: pointer;
+}
+
+.tasks__newButtons {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tasks__hideOrShowAllDone {
   color: rgb(0, 179, 179);
 }
 
-.task__markAllDone {
+.tasks__markAllDone {
   background: transparent;
   border: none;
   color: teal;
   transition: 1s;
+}
+
+
+.js-tasks {
+  padding: 0px 10px;
 }
