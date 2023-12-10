@@ -40,6 +40,10 @@
   border-bottom: solid 1px rgb(212, 212, 212);
 }
 
+.tasks__list--hidden {
+  display: none;
+}
+
 .tasks__item {
   text-decoration: none;
   padding: 4px 10px;
@@ -52,4 +56,15 @@
 
 .js-tasks {
   padding: 0px 10px;
+}
+
+.tasks__hideOrShowAllDone {
+  color: rgb(0, 179, 179);
+}
+
+.task__markAllDone {
+  background: transparent;
+  border: none;
+  color: teal;
+  transition: 1s;
 }
