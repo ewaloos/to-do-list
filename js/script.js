@@ -69,7 +69,7 @@
       <li class="tasks__list ${
         tasks.done && hideDoneTasks ? "tasks__list--hidden" : ""
       }">
-      <span class = "tasks__list">
+      <span class = "tasks__toDoList">
       <button class="js-done tasks__doneButton">${
         task.done ? "✔" : ""
       } </button>

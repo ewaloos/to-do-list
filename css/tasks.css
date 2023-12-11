@@ -16,13 +16,18 @@
   align-items: center;
 }
 
-.tasks__list {
+.tasks__toDoList {
   width: 100%;
   padding: 5px 10px;
   margin-bottom: 10px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.tasks__list {
+  padding-left: 0px;
+  list-style-type: none;
 }
 
 .tasks__list--hidden {
@@ -103,7 +108,6 @@
 .tasks__markAllDone:disabled {
   color: rgb(202, 202, 202);
 }
-
 
 .js-tasks {
   padding: 0px 10px;
