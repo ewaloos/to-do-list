@@ -36,16 +36,16 @@
   list-style-type: none;
 }
 
-.tasks__list--hidden {
-  display: none;
-}
-
 .tasks__item {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.tasks__item--hidden {
+  display: none;
 }
 
 .tasks__item--done {

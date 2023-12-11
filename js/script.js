@@ -30,7 +30,7 @@
     render();
   };
 
-  const hideShowDoneTasks = () => {
+  const toggleHideDoneTasks = () => {
     hideDoneTasks = !hideDoneTasks;
     render();
   };
@@ -66,8 +66,8 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li class="tasks__list ${
-        tasks.done && hideDoneTasks ? "tasks__list--hidden" : ""
+      <li class="tasks__item ${
+        tasks.done && hideDoneTasks ? "tasks__item--hidden" : ""
       }">
       <span class = "tasks__toDoList">
       <button class="js-done tasks__doneButton">${
@@ -89,7 +89,7 @@
 
     const toggleTaskDone = document.querySelector(".js-toggleTaskDone");
     if (toggleTaskDone) {
-      toggleTaskDone.addEventListener("click", hideShowDoneTasks);
+      toggleTaskDone.addEventListener("click", toggleHideDoneTasks);
     }
 
     const markAllDone = document.querySelector(".js-markAllDone");
