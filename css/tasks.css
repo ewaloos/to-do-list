@@ -16,6 +16,12 @@
   align-items: center;
 }
 
+@media (max-width: 540px) {
+  .tasks__header {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tasks__toDoList {
   width: 100%;
   padding: 5px 10px;
