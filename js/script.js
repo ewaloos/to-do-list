@@ -78,7 +78,7 @@
       </span>
       <button class="js-remove tasks__removeButton">🗑</button>
       </span>
-      </li>
+      </li> 
     `;
     }
 
@@ -87,14 +87,14 @@
 
   const bindButtonEvents = () => {
 
-    const toggleTaskDone = document.querySelector(".js-toggleTaskDone");
-    if (toggleTaskDone) {
-      toggleTaskDone.addEventListener("click", toggleHideDoneTasks);
-    }
-
     const markAllDone = document.querySelector(".js-markAllDone");
     if (markAllDone) {
       markAllDone.addEventListener("click", allDone);
+    }
+
+    const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
+    if (toggleHideDoneTasksButton) {
+      toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
     }
   };
 
