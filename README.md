@@ -12,4 +12,4 @@ A simple website which can help organise tasks. After submitting tasks by the us
 
 ## **Preview**
 
-![to-do-list](https://raw.githubusercontent.com/ewaloos/to-do-list/main/images/preview.png)
+![to-do-list](https://raw.githubusercontent.com/ewaloos/to-do-list/main/images/preview_updated.png)
