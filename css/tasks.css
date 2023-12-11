@@ -10,6 +10,10 @@
   font-weight: 700;
   padding: 15px 20px;
   border-bottom: solid 1.5px rgb(212, 212, 212);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .tasks__list {
@@ -26,9 +30,11 @@
 }
 
 .tasks__item {
-  text-decoration: none;
-  padding: 4px 10px;
-  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .tasks__item--done {
@@ -43,6 +49,11 @@
   border: none;
   margin-bottom: 50%;
   cursor: pointer;
+  transition: 1s;
+}
+
+.tasks__doneButton:hover {
+  background-color: rgb(68, 171, 68);
 }
 
 .tasks__removeButton {
@@ -52,22 +63,45 @@
   border: none;
   margin-bottom: 50%;
   cursor: pointer;
+  transition: 1s;
+}
+
+.tasks__removeButton:hover {
+  background-color: rgb(223, 104, 104);
 }
 
 .tasks__newButtons {
   display: flex;
   flex-wrap: wrap;
+  font-size: 80%;
 }
 
 .tasks__hideOrShowAllDone {
-  color: rgb(0, 179, 179);
+  background: transparent;
+  border: none;
+  color: hsl(188, 100%, 25%);
+  cursor: pointer;
+}
+
+.tasks__hideOrShowAllDone:hover {
+  color: hsl(188, 49%, 62%);
+  transition: 1s;
 }
 
 .tasks__markAllDone {
   background: transparent;
   border: none;
-  color: teal;
+  color: hsl(188, 100%, 25%);
   transition: 1s;
+  cursor: pointer;
+}
+
+.tasks__markAllDone:hover {
+  color: hsl(188, 49%, 62%);
+}
+
+.tasks__markAllDone:disabled {
+  color: rgb(202, 202, 202);
 }
 
 

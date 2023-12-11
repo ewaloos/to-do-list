@@ -86,6 +86,7 @@
   };
 
   const bindButtonEvents = () => {
+
     const toggleTaskDone = document.querySelector(".js-toggleTaskDone");
     if (toggleTaskDone) {
       toggleTaskDone.addEventListener("click", hideShowDoneTasks);
@@ -98,21 +99,22 @@
   };
 
   const renderButtons = () => {
-    const buttonsElement = document.querySelector("js.newButtons");
+
+    const buttonsElement = document.querySelector(".js-newButtons");
 
     if (tasks.length > 0) {
       buttonsElement.innerHTML = `
       <button class = "tasks__hideOrShowAllDone js-toggleTaskDone">
-      ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone zadania
+      ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone 
       </button>
       <button class = "tasks__markAllDone js-markAllDone" ${
         tasks.every(({ done }) => done) ? "disabled" : ""
       }>
-      Ukończ wszystkie zadania
+      Ukończ wszystkie 
       </button>
       `;
     } else {
-      buttonsElement.innerHTML = "";
+      buttonsElement.innerHTML = ``;
     }
   };
 
