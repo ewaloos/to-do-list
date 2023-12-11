@@ -32,7 +32,6 @@
 }
 
 .tasks__list {
-  padding-left: 0px;
   list-style-type: none;
 }
 
@@ -40,8 +39,6 @@
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 .tasks__item--hidden {
@@ -58,7 +55,7 @@
   width: 30px;
   height: 30px;
   border: none;
-  margin-bottom: 50%;
+  margin-right: 10px;
   cursor: pointer;
   transition: 1s;
 }
