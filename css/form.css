@@ -1,7 +1,7 @@
 .form {
   display: grid;
   padding: 15px 20px;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 7fr auto;
   grid-gap: 2%;
   margin-bottom: 15px;
 }
@@ -27,9 +27,10 @@
   color: white;
   cursor: pointer;
   transition: 1s;
+  padding: 10px;
 }
 
 .form__addButton:hover {
-  background-color: hsl(188, 77%, 42%);;
+  background-color: hsl(188, 77%, 42%);
   transform: scale(1.1);
 }

@@ -19,6 +19,15 @@
 @media (max-width: 540px) {
   .tasks__header {
     grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .tasks__header {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 10px;
   }
 }
 
@@ -35,14 +44,14 @@
   list-style-type: none;
 }
 
+.tasks__list--hidden {
+  display: none;
+}
+
 .tasks__item {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-}
-
-.tasks__item--hidden {
-  display: none;
 }
 
 .tasks__item--done {
@@ -82,6 +91,15 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 80%;
+}
+
+@media (max-width: 540px) {
+  .tasks__newButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    font-size: 80%;
+  }
 }
 
 .tasks__hideOrShowAllDone {

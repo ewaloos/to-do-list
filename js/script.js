@@ -1,19 +1,24 @@
 {
-  let tasks = [];
+  let tasks = [
+    {
+      content: "Pójść na spacer",
+      done: false,
+    },
+    {
+      content: "Odwiedzić babcię",
+      done: true,
+    },
+  ];
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks = [
-      ...tasks, 
-      { content: newTaskContent },];
+    tasks = [...tasks, { content: newTaskContent }];
 
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks = [
-      ...tasks.slice(0, taskIndex), 
-      ...tasks.slice(taskIndex + 1),];
+    tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
 
     render();
   };
@@ -66,8 +71,8 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li class="tasks__item ${
-        tasks.done && hideDoneTasks ? "tasks__item--hidden" : ""
+      <li class="tasks__list ${
+        task.done && hideDoneTasks ? "tasks__list--hidden" : ""
       }">
       <span class = "tasks__toDoList">
       <button class="js-done tasks__doneButton">${
@@ -76,30 +81,30 @@
       <span class="tasks__item ${task.done ? "tasks__item--done" : ""}">
       ${task.content}
       </span>
-      <button class="js-remove tasks__removeButton">🗑</button>
-      </span>
-      </li> 
-    `;
+    <button class="js-remove tasks__removeButton">🗑</button>
+  </span>
+  </li> 
+  `;
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
 
   const bindButtonEvents = () => {
-
     const markAllDone = document.querySelector(".js-markAllDone");
     if (markAllDone) {
       markAllDone.addEventListener("click", allDone);
     }
 
-    const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
+    const toggleHideDoneTasksButton = document.querySelector(
+      ".js-toggleHideDoneTasks"
+    );
     if (toggleHideDoneTasksButton) {
       toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
     }
   };
 
   const renderButtons = () => {
-
     const buttonsElement = document.querySelector(".js-newButtons");
 
     if (tasks.length > 0) {
@@ -134,7 +139,7 @@
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
       newTaskElement.value = "";
-    };
+    }
 
     newTaskElement.focus();
   };
@@ -148,4 +153,4 @@
   };
 
   init();
-};
+}
