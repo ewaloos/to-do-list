@@ -9,6 +9,7 @@
       done: true,
     },
   ];
+
   let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
@@ -109,7 +110,7 @@
 
     if (tasks.length > 0) {
       buttonsElement.innerHTML = `
-      <button class = "tasks__hideOrShowAllDone js-toggleTaskDone">
+      <button class = "tasks__hideOrShowAllDone js-toggleHideDoneTasks">
       ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone 
       </button>
       <button class = "tasks__markAllDone js-markAllDone" ${
